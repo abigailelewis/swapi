@@ -1,24 +1,17 @@
-
-<div style="text-align:center">
-<h1>Swapi Search Soiree</h1>
-
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
-
 
   <label for="type">Type</label>
   <select name="type" formControlName="type">
+  
     <option value="films">Films</option>
     <option value="people">People</option>
     <option value="starships">Starships</option>
   </select>
-
-
   <input type="search" name="term" formControlName="term">
   <button type="submit">Search</button>
 </form>
-
     <div *ngFor="let value of values"></div>
 
       <pre>Data Obtained is: {{ this.value | json}}</pre>
-<!-- <app-starwars></app-starwars> -->
-</div>
+    
+
